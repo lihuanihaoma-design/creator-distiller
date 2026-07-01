@@ -1,0 +1,4 @@
+openai-whisper>=20231117
+zhconv>=1.4.3
+yt-dlp>=2024.0
+python-docx>=1.0.0
