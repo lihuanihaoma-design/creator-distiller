@@ -4,6 +4,9 @@
   <h1>🫗 Creator Distiller</h1>
   <h3>博主万能蒸馏器 — Multilingual Edition</h3>
   <p>
+    <a href="README.md">简体中文</a> | <strong>English</strong>
+  </p>
+  <p>
     Distill any Douyin, Xiaohongshu, or Twitter/X creator with a single click.<br/>
     From videos to high-fidelity transcripts, from social posts to structured knowledge bases.<br/>
     <strong>Zero-cost startup, run directly with a simple pip install.</strong>
