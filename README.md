@@ -32,6 +32,7 @@
 |-----------|----------|
 | 抖音博主链接 / ID | `{标题}.txt` × N，标点完整、繁转简 |
 | 小红书博主主页 | 同上 + 小红书笔记正文 |
+| Twitter/X 账号用户名 | 全量推文、高清图片及高赞评论归档的带 YAML Metadata 的 Markdown 知识库 |
 | YouTube 频道 | 同上（计划中） |
 | `--max-videos 200` | 200 条口播逐字稿，带点赞/评论/时长索引 |
 
@@ -177,6 +178,7 @@ creator-distiller/
 ├── README.md                          ← 你在看的
 ├── SKILL.md                           ← Agent 可复用的技能定义
 ├── scripts/
+│   ├── distill_twitter.py             ← Twitter/X 极速高级搜索时间切片蒸馏脚本（TikHub）
 │   ├── extract_transcripts.py         ← 从 JSON 提取逐字稿 + 标点恢复 + 生成索引
 │   ├── retry_ytdlp.py                 ← yt-dlp 下载音频 + Whisper 转写（崩溃可恢复）
 │   └── utils/
@@ -194,6 +196,7 @@ creator-distiller/
 - [x] Whisper 语音转文字
 - [x] 中文标点恢复 + 繁转简
 - [x] 增量存盘（崩溃恢复）
+- [x] Twitter/X 博主深度提炼（包含高清图、高赞评论）
 - [ ] 一键纯 yt-dlp 脚本（零依赖 blogger-distiller）
 - [ ] YouTube 频道支持
 - [ ] 小红书笔记正文提取
