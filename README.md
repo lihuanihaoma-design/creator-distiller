@@ -1,27 +1,23 @@
 <div align="center">
 
-# 🫗 博主万能蒸馏器 (Creator Distiller)
+# 🫗 博主万能蒸馏器 (Blogger Distiller)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/alchaincyf/nuwa-skill/main/assets/banner.svg" alt="Creator Distiller Hero" width="600"/>
-</p>
-
-> *「别让博主只留在屏幕里，一键把他们‘吸干’成你的本地 AI 知识库与数字分身」*
+> *「别让博主只留在屏幕里，一键把他们‘吸干’成你的本地 AI 知识库，零成本提取博主的认知操作系统」*
 
 简体中文 | [English](README_EN.md)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![RAG-Ready](https://img.shields.io/badge/RAG-Ready-green.svg)](#-一句话)
-[![Local-First](https://img.shields.io/badge/Local-First-blue.svg)](#-安装)
+[![RAG-Ready](https://img.shields.io/badge/RAG-Ready-green.svg)](#-能干什么)
+[![Local-First](https://img.shields.io/badge/Local-First-blue.svg)](#-安装与使用)
 [![Zero-Cookie](https://img.shields.io/badge/Zero--Cookie-Twitter/X-orange.svg)](#-为什么它极其牛逼)
 
 <br>
 
-**女娲蒸馏了名人的思维方式，而「博主万能蒸馏器」则是捕获博主思想的原动力物理抽水机。**
+**博主是时代的思想放大器，而「Blogger Distiller」则是帮你捕获博主认知资产的超强物理抽水机。**
 
-只需输入一个博主名字，自动在后台无感、无风控、零 Cookie 地“抽干”他们所有的历史推文、视频逐字稿、高清配图、以及读者神评，瞬间为你构建出一座高保真的本地大模型 RAG 知识库与专属 Agent。
+无需配置任何 Cookie，也不需要承担被推特风控封号的风险。只需输入一个博主名字，自动在后台“抽干”他们所有的历史推文、视频逐字稿、高清配图、以及最精华的读者评论，瞬间为你构建出一座高保真的本地 RAG 知识库与专属数字分身。
 
-[看效果](#⚡-效果示例) · [为什么它极其牛逼](#-为什么它极其牛逼) · [安装与使用](#⚡-五分钟上手) · [大超说媒实战](#-经典实战案例大超说媒) · [路线图](#-路线图)
+[效果演示](#⚡-效果演示) · [为什么它极其牛逼](#🔥-为什么它极其牛逼) · [安装与使用](#⚡-安装与使用) · [大超说媒实战](#⚡-经典实战案例大超说媒) · [路线图](#🚧-路线图)
 
 <br>
 
@@ -31,9 +27,9 @@
 
 ---
 
-## ⚡ 效果示例
+## ⚡ 效果演示
 
-这不是复读语录，这是当你把「博主万能蒸馏器」所提取的高保真 Markdown 知识库喂给本地大模型后，他们用自己独特的认知系统、表达DNA和口吻帮你解答现实问题的场景：
+这不是机械复读语录，这是当你把「Blogger Distiller」所提取的高保真 Markdown 知识库喂给本地大模型后，他们用自己独特的认知系统、表达DNA和口吻帮你在本地解答问题的场景：
 
 ```
 用户 ❯ 大超，帮我看看这一对合适不？女生30岁英语老师杭州本地中产家庭，男生31岁程序员农村出身，大厂35万带房贷。
@@ -64,7 +60,7 @@ dontbesilent ❯ 你完全分不清什么是“问题”，什么是“痛感”
 
 ## 🎯 能干什么
 
-| 你扔进来 | 它还给你 | 核心优势 |
+| 你扔进来 | 它还给你 | 本机优势 |
 |-----------|----------|----------|
 | **Twitter/X 用户名** | 全量推文、高清图片及高赞评论归档的带 YAML Metadata 的 Markdown | 💡 **100% 零 Cookie、免登录、抗风控**，直接秒杀传统接口 |
 | **抖音博主 ID / 昵称** | `{标题}.txt` × N，标点完整、繁转简的视频高精度口播逐字稿 | 💡 **纯免费。** 实时解析音频，磁盘零残留，崩溃自动恢复 |
@@ -75,9 +71,9 @@ dontbesilent ❯ 你完全分不清什么是“问题”，什么是“痛感”
 
 ## 🔥 为什么它极其牛逼？
 
-目前在 GitHub 上，绝大多数 Twitter 爬虫和媒体下载工具都在 2026 年面临着**无法高频访问、频繁触发 400 Bad Request、以及 Cookie 泄露被封号**的死局。而我们彻底重写了这套架构，实现了以下革命性的技术突破：
+目前在 GitHub 上，绝大多数 Twitter 爬虫和媒体下载工具都面临着**频繁触发 400 Bad Request、以及 Cookie 泄露被封号**的死局。而我们彻底重写了这套架构，实现了以下革命性的技术突破：
 
-### 1. 高级搜索日期切片 (Zero-Cookie / Zero-Browser) 🛡️
+### 1. 高级搜索日期切片 (Zero-Cookie / Zero-Browser) 🛡本地优先
 不再依赖极易被推特防火墙阻断的 `next_cursor` 游标翻页。我们将时间线科学切割为 **37个 15天日期微区间**，通过 `from:username since:YYYY-MM-DD until:YYYY-MM-DD` 组合语法执行定向 Latest 检索。
 * **效果**：实现 100% 稳定的高频免登录、免 Cookie 抓取，彻底告别 400 错误。
 
@@ -91,7 +87,7 @@ dontbesilent ❯ 你完全分不清什么是“问题”，什么是“痛感”
 
 ---
 
-## ⚡ 五分钟上手
+## ⚡ 安装与使用
 
 ### 1. 快速安装
 ```bash
@@ -100,9 +96,9 @@ git clone https://github.com/lihuanihaoma-design/creator-distiller.git
 cd creator-distiller
 
 # 安装依赖
-pip install openai-whisper zhconv yt-dlp python-docx tikhub
+pip install -r requirements.txt
 
-# 确保安装 ffmpeg 
+# 确保安装 ffmpeg（Whisper/yt-dlp 必要依赖）
 # macOS: brew install ffmpeg  |  Windows: winget install Gyan.FFmpeg
 ```
 
@@ -121,20 +117,47 @@ pip install openai-whisper zhconv yt-dlp python-docx tikhub
 
 ### 3. 一键运行！
 ```bash
-# 蒸馏任意推特博主（例如 dontbesilent）
+# 1. 蒸馏 Twitter/X 博主（例如 dontbesilent）
 python scripts/distill_twitter.py dontbesilent
 
-# 或者指定你想要的开始时间
-python scripts/distill_twitter.py XiaoNianTalk 2025-06-01
+# 2. 蒸馏 抖音 博主（例如 视频链接）
+python scripts/retry_ytdlp.py "抖音博主主页或视频链接"
 ```
+
 你将直接在本地获得一个完美的、包含 YAML Front-Matter 标签的 Markdown 文件夹！
+
+---
+
+## 🔧 工作原理
+
+Blogger Distiller 分为两条核心流水线，完全针对大语言模型（LLM）的结构偏好进行设计：
+
+### 📺 视频转写流水线 (抖音/小红书)
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌──────────────┐
+│  TikHub API  │───▶│   yt-dlp    │───▶│   Whisper    │───▶│  Punctuation  │
+│  元数据采集   │    │  音频流提取  │    │  语音转文字   │    │  标点自动恢复 │
+└─────────────┘    └─────────────┘    └─────────────┘    └──────────────┘
+```
+* **yt-dlp 实时解析**：拒绝过期的 CDN 直链链接，每次均实时解析音轨，零费用、永不过期。
+* **自动繁转简 + 标点恢复**：Whisper 转换后缺失标点，我们通过算法自动补齐逗号、句号、问号，实现完美的阅读排版。
+
+### 🐦 推文采集流水线 (Twitter/X)
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌──────────────┐
+│ 15天日期切片 │───▶│  定向检索    │───▶│  配图本地化  │───▶│ 读者神评合并  │
+│ 规避400游标  │    │ 最新时间线   │    │ 高清大图下载 │    │ 作为上下文 RAG│
+└─────────────┘    └─────────────┘    └─────────────┘    └──────────────┘
+```
+* **高清图片本地化**：去除 Twitter 缩略图限制，下载原始高分辨率 `.jpg`，并在 Markdown 中自动建立本地引用路径。
+* **高赞热评深度合成**：自动捕获推文下方热度排名前 15 的追问和反思，连同点赞数一并写入，打造拥有“群体智慧辩论”的深度知识库。
 
 ---
 
 ## 📂 文件结构
 
 ```
-creator-distiller/
+blogger-distiller/
 ├── README.md                          ← 你正在看的
 ├── README_EN.md                       ← English Version
 ├── SKILL.md                           ← Agent 可复用的技能定义
@@ -151,7 +174,6 @@ creator-distiller/
 ---
 
 ## ⚡ 经典实战案例：“大超说媒”
-*(详细步骤和提示词已在 [大超说媒实战部分](./README.md#1-蒸馏所得的结构化知识库训练上下文案例) 归档，请展开下方折叠查看)*
 
 <details>
 <summary>点击展开 ➡️ 如何利用大超的逐字稿打造一个真实的“相亲评估 AI Agent”</summary>
@@ -208,8 +230,8 @@ bookmarks: 29
 
 ## ⚖️ License
 
-MIT — 随便用，随便改，觉得牛逼请点个 **Star** 支持一下原创！🌟
+MIT — 随便用，随便改，觉得好用请点击右上角点个 **Star ⭐️** 支持一下！
 
 <div align="center">
-<sub>built with ☕ and a lot of 🚀 Creator Distiller</sub>
+<sub>built with ☕ and a lot of 🚀 Blogger Distiller</sub>
 </div>

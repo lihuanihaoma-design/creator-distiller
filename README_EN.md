@@ -1,27 +1,23 @@
 <div align="center">
 
-# 🫗 Creator Distiller (博主万能蒸馏器)
+# 🫗 Blogger Distiller (博主万能蒸馏器)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/alchaincyf/nuwa-skill/main/assets/banner.svg" alt="Creator Distiller Hero" width="600"/>
-</p>
-
-> *"Stop wasting time scrolling. Distill any Douyin, Xiaohongshu, or Twitter/X creator into your local LLM and run their digital twin in seconds."*
+> *"Stop wasting time scrolling. Distill any Douyin, Xiaohongshu, or Twitter/X creator into your local LLM and extract their cognitive OS in seconds."*
 
 [简体中文](README.md) | English
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![RAG-Ready](https://img.shields.io/badge/RAG-Ready-green.svg)](#-concept)
-[![Local-First](https://img.shields.io/badge/Local-First-blue.svg)](#-quickstart)
-[![Zero-Cookie](https://img.shields.io/badge/Zero--Cookie-Twitter/X-orange.svg)](#-why-is-it-insanely-great)
+[![RAG-Ready](https://img.shields.io/badge/RAG-Ready-green.svg)](#-capabilities)
+[![Local-First](https://img.shields.io/badge/Local-First-blue.svg)](#⚡-installation--usage)
+[![Zero-Cookie](https://img.shields.io/badge/Zero--Cookie-Twitter/X-orange.svg)](#-why-it-is-insanely-great)
 
 <br>
 
-**Nuwa distilled how great thinkers analyze. Creator Distiller is the high-power physical suction pump that extracts their raw source materials.**
+**Creators are the cognitive amplifiers of our generation. 「Blogger Distiller」 is the high-power suction pump that extracts their mental assets directly to your machine.**
 
-Simply input any creator's username, and watch the pipeline automatically, stealthily, and silently "drain" their entire historical posts, video transcripts, high-resolution media, and reader hot-takes. No login sessions, zero browser dependencies, and absolutely **no Cookies required**. Build your high-fidelity local RAG knowledge base in minutes.
+No Cookies or login sessions are required, and there's absolutely no risk of account bans. Simply input any creator's username, and watch the pipeline automatically, stealthily, and silently "drain" their entire historical posts, video transcripts, high-resolution media, and reader hot-takes into highly structured Markdown files. Build your high-fidelity local RAG knowledge base in minutes.
 
-[Live Examples](#⚡-live-rag-examples) · [Why It's Insanely Great](#-why-is-it-insanely-great) · [Quickstart](#⚡-5-minute-quickstart) · [Featured Case Study](#-featured-case-study-dachao-matchmaker) · [Roadmap](#-roadmap)
+[Live Examples](#⚡-live-rag-examples) · [Why It's Insanely Great](#🔥-why-it-is-insanely-great) · [Installation & Usage](#⚡-installation--usage) · [Featured Case Study](#⚡-featured-case-study-dachao-matchmaker) · [Roadmap](#🚧-roadmap)
 
 <br>
 
@@ -33,7 +29,7 @@ Simply input any creator's username, and watch the pipeline automatically, steal
 
 ## ⚡ Live RAG Examples
 
-This is not simple role-playing or a quote-reciter. This is what happens when you feed Creator Distiller's raw Markdown output to your local LLM (such as GPT-4o or Claude 3.5), allowing them to use their genuine cognitive frameworks and expression DNA to solve your real problems:
+This is not simple role-playing or a quote-reciter. This is what happens when you feed Blogger Distiller's raw Markdown output to your local LLM (such as GPT-4o or Claude 3.5), allowing them to use their genuine cognitive frameworks and expression DNA to solve your real problems:
 
 ```
 User      ❯ DaChao, evaluate this match: Female 30, English teacher, Hangzhou local, middle-class. Male 31, Software Engineer, humble village background, owns apartment with mortgage.
@@ -73,7 +69,7 @@ dontbesilent ❯ You completely fail to distinguish between a "Question" and a "
 
 ---
 
-## 🔥 Why Is It Insanely Great?
+## 🔥 Why It Is Insanely Great?
 
 In 2026, almost every public Twitter/X scraper and archiver on GitHub has run into a dead-end: **session bans, rate-limits, and frequent HTTP 400 Bad Request errors**. We solved this by completely rewriting the collection architecture:
 
@@ -91,7 +87,7 @@ Most creators are restricted by character limits. The most valuable debates, cri
 
 ---
 
-## ⚡ 5-Minute Quickstart
+## ⚡ Installation & Usage
 
 ### 1. Installation
 ```bash
@@ -100,7 +96,7 @@ git clone https://github.com/lihuanihaoma-design/creator-distiller.git
 cd creator-distiller
 
 # Install dependencies
-pip install openai-whisper zhconv yt-dlp python-docx tikhub
+pip install -r requirements.txt
 
 # Install ffmpeg on your system (mandatory)
 # macOS: brew install ffmpeg  |  Windows: winget install Gyan.FFmpeg
@@ -121,20 +117,46 @@ pip install openai-whisper zhconv yt-dlp python-docx tikhub
 
 ### 3. Run It!
 ```bash
-# Distill any Twitter creator (e.g., dontbesilent)
+# 1. Distill Twitter/X Creator (e.g., dontbesilent)
 python scripts/distill_twitter.py dontbesilent
 
-# Or specify your custom start date
-python scripts/distill_twitter.py XiaoNianTalk 2025-06-01
+# 2. Distill Douyin Creator (e.g., Creator Page URL)
+python scripts/retry_ytdlp.py "Douyin creator page link or video URL"
 ```
 You will immediately get a beautifully organized, multi-modal local Markdown knowledge folder.
+
+---
+
+## 🔧 How It Works
+
+Blogger Distiller is split into two specialized pipeline architectures tailored directly for Large Language Models (LLM):
+
+### 📺 Video Transcription Pipeline (Douyin/Xiaohongshu)
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌──────────────┐
+│  TikHub API  │───▶│   yt-dlp    │───▶│   Whisper    │───▶│  Punctuation  │
+│  Metadata   │    │  Audio Ripping│    │  Speech-2-Text│    │  Restoration  │
+└─────────────┘    └─────────────┘    └─────────────┘    └──────────────┘
+```
+* **yt-dlp Real-Time Parsing**: Completely avoids expired CDN link traps. Directly streams the audio tracks locally on-the-fly, forever free.
+* **Simplified Conversion & Punctuation Restoration**: Whisper's output lacks proper breaks. Our custom restorer injects standard commas, periods, and question marks into the text flow.
+
+### 🐦 Tweet Harvesting Pipeline (Twitter/X)
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌──────────────┐
+│ 15-Day Date │───▶│  Stealth     │───▶│  Media      │───▶│ Comments Sync│
+│ Slicing     │    │  Querying    │    │ Localizer   │    │ and Merge    │
+└─────────────┘    └─────────────┘    └─────────────┘    └──────────────┘
+```
+* **Full-Resolution Media Downloads**: Automatically grabs high-res `.jpg` files without Twitter's thumbnail limits, embedding local relative links inside the Markdown output.
+* **Interactive Thread Merging**: Crawls the top 15 replies/comments including their likes, giving your RAG model valuable crowd context.
 
 ---
 
 ## 📂 File Structure
 
 ```
-creator-distiller/
+blogger-distiller/
 ├── README.md                          ← Chinese Version
 ├── README_EN.md                       ← You are here
 ├── SKILL.md                           ← Agent Skill Definition
@@ -151,7 +173,6 @@ creator-distiller/
 ---
 
 ## ⚡ Featured Case Study: "DaChao Matchmaker"
-*(Detailed steps are archived in [README_EN.md Case Study Section](./README_EN.md#-featured-case-study-dachao-matchmaker), click the fold below to view)*
 
 <details>
 <summary>Click to Expand ➡️ How to use the distilled transcripts to build a real-world Matchmaking AI Agent</summary>
@@ -208,8 +229,8 @@ Tone & Style:
 
 ## ⚖️ License
 
-MIT License — feel free to use, modify, and distribute. If you find this project insanely great, please give us a **Star**! 🌟
+MIT License — feel free to use, modify, and distribute. If you find this project insanely great, please give us a **Star ⭐️**!
 
 <div align="center">
-<sub>built with ☕ and a lot of 🚀 Creator Distiller</sub>
+<sub>built with ☕ and a lot of 🚀 Blogger Distiller</sub>
 </div>
