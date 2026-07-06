@@ -19,10 +19,6 @@ No Cookies or login sessions are required, and there's absolutely no risk of acc
 
 [Live Examples](#⚡-live-rag-examples) · [Why It's Insanely Great](#🔥-why-it-is-insanely-great) · [Installation & Usage](#⚡-installation--usage) · [Featured Case Study](#⚡-featured-case-study-dachao-matchmaker) · [Roadmap](#🚧-roadmap)
 
-<br>
-
-[![Star History Chart](https://api.star-history.com/svg?repos=lihuanihaoma-design/creator-distiller&type=Date)](https://star-history.com/#lihuanihaoma-design/creator-distiller&Date)
-
 </div>
 
 ---
@@ -230,6 +226,14 @@ Tone & Style:
 ## ⚖️ License
 
 MIT License — feel free to use, modify, and distribute. If you find this project insanely great, please give us a **Star ⭐️**!
+
+## 📈 Star History
+
+<div align="center">
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lihuanihaoma-design/creator-distiller&type=Date)](https://star-history.com/#lihuanihaoma-design/creator-distiller&Date)
+
+</div>
 
 <div align="center">
 <sub>built with ☕ and a lot of 🚀 Blogger Distiller</sub>

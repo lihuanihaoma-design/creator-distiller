@@ -19,10 +19,6 @@
 
 [效果演示](#⚡-效果演示) · [为什么它极其牛逼](#🔥-为什么它极其牛逼) · [安装与使用](#⚡-安装与使用) · [大超说媒实战](#⚡-经典实战案例大超说媒) · [路线图](#🚧-路线图)
 
-<br>
-
-[![Star History Chart](https://api.star-history.com/svg?repos=lihuanihaoma-design/creator-distiller&type=Date)](https://star-history.com/#lihuanihaoma-design/creator-distiller&Date)
-
 </div>
 
 ---
@@ -231,6 +227,14 @@ bookmarks: 29
 ## ⚖️ License
 
 MIT — 随便用，随便改，觉得好用请点击右上角点个 **Star ⭐️** 支持一下！
+
+## 📈 Star History
+
+<div align="center">
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lihuanihaoma-design/creator-distiller&type=Date)](https://star-history.com/#lihuanihaoma-design/creator-distiller&Date)
+
+</div>
 
 <div align="center">
 <sub>built with ☕ and a lot of 🚀 Blogger Distiller</sub>
