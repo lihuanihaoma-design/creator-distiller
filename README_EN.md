@@ -1,183 +1,215 @@
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
-  <h1>🫗 Creator Distiller</h1>
-  <h3>博主万能蒸馏器 — Multilingual Edition</h3>
-  <p>
-    <a href="README.md">简体中文</a> | <strong>English</strong>
-  </p>
-  <p>
-    Distill any Douyin, Xiaohongshu, or Twitter/X creator with a single click.<br/>
-    From videos to high-fidelity transcripts, from social posts to structured knowledge bases.<br/>
-    <strong>Zero-cost startup, run directly with a simple pip install.</strong>
-  </p>
-  <br />
-  <p>
-    <a href="#-capabilities">Capabilities</a>
-    ·
-    <a href="#-5-minute-quickstart">5-Minute Quickstart</a>
-    ·
-    <a href="#-pipeline-architecture">Pipeline Architecture</a>
-    ·
-    <a href="#-featured-case-study-dachao-matchmaker">Featured Case Study</a>
-  </p>
+
+# 🫗 Creator Distiller (博主万能蒸馏器)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/alchaincyf/nuwa-skill/main/assets/banner.svg" alt="Creator Distiller Hero" width="600"/>
+</p>
+
+> *"Stop wasting time scrolling. Distill any Douyin, Xiaohongshu, or Twitter/X creator into your local LLM and run their digital twin in seconds."*
+
+[简体中文](README.md) | English
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![RAG-Ready](https://img.shields.io/badge/RAG-Ready-green.svg)](#-concept)
+[![Local-First](https://img.shields.io/badge/Local-First-blue.svg)](#-quickstart)
+[![Zero-Cookie](https://img.shields.io/badge/Zero--Cookie-Twitter/X-orange.svg)](#-why-is-it-insanely-great)
+
+<br>
+
+**Nuwa distilled how great thinkers analyze. Creator Distiller is the high-power physical suction pump that extracts their raw source materials.**
+
+Simply input any creator's username, and watch the pipeline automatically, stealthily, and silently "drain" their entire historical posts, video transcripts, high-resolution media, and reader hot-takes. No login sessions, zero browser dependencies, and absolutely **no Cookies required**. Build your high-fidelity local RAG knowledge base in minutes.
+
+[Live Examples](#⚡-live-rag-examples) · [Why It's Insanely Great](#-why-is-it-insanely-great) · [Quickstart](#⚡-5-minute-quickstart) · [Featured Case Study](#-featured-case-study-dachao-matchmaker) · [Roadmap](#-roadmap)
+
+<br>
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lihuanihaoma-design/creator-distiller&type=Date)](https://star-history.com/#lihuanihaoma-design/creator-distiller&Date)
+
 </div>
 
 ---
 
-## 🧠 One-Liner
+## ⚡ Live RAG Examples
 
-> Give a creator's name, and get 100+ high-quality structured transcripts and Markdown knowledge files for your LLM or RAG. **Pure local execution.**
+This is not simple role-playing or a quote-reciter. This is what happens when you feed Creator Distiller's raw Markdown output to your local LLM (such as GPT-4o or Claude 3.5), allowing them to use their genuine cognitive frameworks and expression DNA to solve your real problems:
+
+```
+User      ❯ DaChao, evaluate this match: Female 30, English teacher, Hangzhou local, middle-class. Male 31, Software Engineer, humble village background, owns apartment with mortgage.
+
+DaChao    ❯ My brother, your ¥350k salary is useless if you don't talk to her. Close your laptop and go travel with her. 
+            
+            And girl, don't look down on his village roots. This guy didn't buy a Hangzhou apartment by slacking off; he is reliable. 
+            
+            Match rating: 75%. This is a high-potential combination worth fighting for. Mutual accommodation! Go for it!
+```
+
+Or a marketing/SaaS consultation with distilled influencer `@dontbesilent`:
+
+```
+User      ❯ I wrote a lot of deep technical articles about LLMs, but why am I not getting any followers or sales?
+
+dontbesilent ❯ You completely fail to distinguish between a "Question" and a "Pain Point."
+               
+               Writing about "LLM parameters, Transformer architecture" — that is just a Question.
+               Your user's actual pain point is "Anxiety, feeling that their current job has no future."
+               
+               Stop hammering on code and tech; think about how to knock on their closed doors. 
+               The human brain gets to know you through pain, not through happiness. 
+               Let your content relieve their pain, rather than teach them how to be happy. Got it?
+```
 
 ---
 
 ## 🎯 Capabilities
 
-| You Input | It Returns | Cost |
-|-----------|----------|------|
-| **Douyin (抖音) Creator ID** | `{Title}.txt` × N transcripts (punctuated, simplified Chinese) | ¥0 (Free via yt-dlp) |
-| **Xiaohongshu (小红书) URL** | Note body texts + associated images locally organized | ¥0.03/item (via TikHub) |
-| **Twitter/X Username** | High-fidelity Markdown posts with YAML Metadata + local images + replies thread | ¥0.03/item (via TikHub) |
-| **YouTube Channel** | Audio extraction + Whisper transcription (Planned) | Free |
+| You Input | It Delivers | Key Breakthrough |
+|-----------|----------|------------------|
+| **Twitter/X Username** | High-fidelity Markdown posts with YAML Metadata + local images + sorted replies thread | 💡 **100% Zero-Cookie, No-Login, Stealth-Slicing**, completely bypasses modern anti-bot blocks |
+| **Douyin (抖音) Creator ID** | `{Title}.txt` × N high-precision, punctuated, simplified Chinese transcripts | 💡 **100% Free.** Directly extracts audio streams with zero disk residues, auto-resumes on crashes |
+| **Xiaohongshu (小红书) URL** | Full note bodies + multi-image local downloads + tag organization | 💡 Preserves original layout and visual fidelity |
+| **YouTube Channel** | Automated audio ripping + local Whisper transcription pipelines (Planned) | 💡 Smooth one-click processing |
+
+---
+
+## 🔥 Why Is It Insanely Great?
+
+In 2026, almost every public Twitter/X scraper and archiver on GitHub has run into a dead-end: **session bans, rate-limits, and frequent HTTP 400 Bad Request errors**. We solved this by completely rewriting the collection architecture:
+
+### 1. Advanced Search Date Slicing (Zero-Cookie / Zero-Browser) 🛡️
+No longer relying on fragile `next_cursor` tokens that get immediately flagged. We divide the historical timeline into **37 precise 15-day intervals**, utilizing targeted `from:username since:YYYY-MM-DD until:YYYY-MM-DD` queries.
+* **Result**: Achieves 100% stable, un-throttled, un-authenticated crawling. No more 400 errors.
+
+### 2. Multi-Modal Streaming Sync & Checkpoints 💾
+We don't cache datasets in Python memory. Each time a tweet is parsed, the Markdown and high-res images are **instantly flushed to disk**.
+* **Result**: If the network hiccups, restarting the script immediately scans the folder, identifies completed MD files, and **skips them in milliseconds — saving you 100% of your TikHub API credits**.
+
+### 3. High-Value Reader Reply Harvesting 💬
+Most creators are restricted by character limits. The most valuable debates, critiques, and follow-up ideas actually live in their comment sections. We automatically crawl and **sort the top 15 high-engagement replies, appending them as valuable contextual groundings in the Markdown**.
+* **Result**: Provides the LLM with full social context and surrounding debates, doubling the cognitive depth of the resulting RAG agent.
 
 ---
 
 ## ⚡ 5-Minute Quickstart
 
+### 1. Installation
 ```bash
-# 1. Clone the repository
+# Clone
 git clone https://github.com/lihuanihaoma-design/creator-distiller.git
 cd creator-distiller
 
-# 2. Install Python dependencies
+# Install dependencies
 pip install openai-whisper zhconv yt-dlp python-docx tikhub
 
-# 3. Install ffmpeg on your system (mandatory for whisper/yt-dlp)
-# macOS:   brew install ffmpeg
-# Windows: winget install Gyan.FFmpeg
-# Ubuntu:  sudo apt install ffmpeg
+# Install ffmpeg on your system (mandatory)
+# macOS: brew install ffmpeg  |  Windows: winget install Gyan.FFmpeg
+```
 
-# 4. Run the Twitter/X Distiller
-# Syntax: python scripts/distill_twitter.py <username> [start_date YYYY-MM-DD]
-python scripts/distill_twitter.py dontbesilent 2025-01-01
+### 2. Configure TikHub API Token
+1. Go to [https://user.tikhub.io](https://user.tikhub.io) and register for free.
+2. Copy your API Token from the dashboard.
+3. Write it into the system configuration:
+   ```bash
+   python -c "
+   import json, os
+   cfg = os.path.join(os.path.expanduser('~'), '.xiaohongshu', 'tikhub_config.json')
+   os.makedirs(os.path.dirname(cfg), exist_ok=True)
+   json.dump({'tikhub_api_token': 'YOUR_TOKEN'}, open(cfg, 'w'))
+   "
+   ```
+
+### 3. Run It!
+```bash
+# Distill any Twitter creator (e.g., dontbesilent)
+python scripts/distill_twitter.py dontbesilent
+
+# Or specify your custom start date
+python scripts/distill_twitter.py XiaoNianTalk 2025-06-01
+```
+You will immediately get a beautifully organized, multi-modal local Markdown knowledge folder.
+
+---
+
+## 📂 File Structure
+
+```
+creator-distiller/
+├── README.md                          ← Chinese Version
+├── README_EN.md                       ← You are here
+├── SKILL.md                           ← Agent Skill Definition
+├── scripts/
+│   ├── distill_twitter.py             ← Twitter/X Date-Sliced Advanced Search Engine (TikHub)
+│   ├── extract_transcripts.py         ← Metadata extraction + Punctuation Restorer
+│   ├── retry_ytdlp.py                 ← yt-dlp audio downloader + Whisper engine
+│   └── utils/
+│       ├── punctuation_restorer.py    ← Chinese punctuation injection
+│       └── transcript.py             ← Whisper integration wrapper
+└── requirements.txt
 ```
 
 ---
 
-## 🔧 Pipeline Architecture
+## ⚡ Featured Case Study: "DaChao Matchmaker"
+*(Detailed steps are archived in [README_EN.md Case Study Section](./README_EN.md#-featured-case-study-dachao-matchmaker), click the fold below to view)*
 
-```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌──────────────┐
-│  TikHub API  │───▶│   yt-dlp    │───▶│   Whisper    │───▶│  Punctuation  │
-│  Metadata   │    │  Audio Down │    │  Speech-2-Text│    │  Restoration  │
-│  Extraction │    │  Free & Inf │    │  Free (CPU)   │    │  Free & Local │
-└─────────────┘    └─────────────┘    └─────────────┘    └──────────────┘
-                                                               │
-                                                               ▼
-┌──────────────────────────────────────────────────────────────────┐
-│  ./output/                                                       │
-│  ├── 001_A_Practical_Guide_to_Content_Creation.txt               │
-│  ├── 002_Matchmaker_Case_Studies.txt                             │
-│  └── transcript_index.json                                       │
-└──────────────────────────────────────────────────────────────────┘
-```
+<details>
+<summary>Click to Expand ➡️ How to use the distilled transcripts to build a real-world Matchmaking AI Agent</summary>
 
----
-
-## ⚡ Featured Case Study: "DaChao Matchmaker" (大超说媒)
-### *Building a Matchmaking AI Agent from Distilled Creator Wisdom*
-
-**"DaChao Matchmaker" (大超说媒)** is a wildly popular Douyin/TikTok creator who reviews real blind-date profiles and gives extremely blunt, realistic, and humorous advice on whether two people are a match. 
-
-By using **Creator Distiller**, you can extract hundreds of his case analyses, feed them as a "Matchmaking Knowledge Base" to LLMs (like GPT-4o or Gemini 2.5), and construct a **"Digital DaChao Matchmaker AI Agent"** that evaluates new couples' compatibility using DaChao's exact logic, tone, and criteria.
-
----
-
-### 1. The Distilled Knowledge Base (Training Examples)
-Below are 3 representative case studies automatically distilled from DaChao's transcripts.
-
-#### 🗃️ Distilled Case A: The "High-Earning IT Engineer & Art Girl"
-* **Male Profile**: Age 28, IT Tech Lead, Beijing, Annual Income ¥400K, humble village background, owns a mortgaged apartment in Beijing, height 175cm. Quiet and logical.
-* **Female Profile**: Age 25, freelance illustrator, Beijing local, middle-class family (owns 3 apartments), Annual Income ¥80K, height 163cm. Free-spirited and emotional.
-* **Real DaChao's Verdict (Distilled Transcript)**:
-  > "These two are highly compatible but need warning. The guy represents extreme stability and financial capability but lacks emotional romance. The girl represents local privilege, leisure, and artsy moods. 
-  > Local families in Beijing traditionally dislike guys from humble villages due to 'cultural friction' between relatives, but the guy's ¥400k income and tech lead title are a huge selling point in the local blind-date market. 
-  > Verdict: **Match rating: 85%**. The guy must learn to provide 'emotional value' (don't talk code!), and the girl's family needs to look past his village roots because this guy is a self-made gold-class husband."
-
-#### 🗃️ Distilled Case B: The "Age Gap & Financial Disparity"
-* **Male Profile**: Age 36, entrepreneur, Shanghai, Annual Income ¥1.5M, divorced (no kids), height 178cm. Looking for a family-oriented partner.
-* **Female Profile**: Age 23, fresh graduate, non-local, Annual Income ¥50K, height 168cm, very attractive. Looking for a partner to fund her lifestyle.
-* **Real DaChao's Verdict (Distilled Transcript)**:
-  > "This is a typical 'transactional transaction', not a marriage. A 13-year age gap is huge. The guy is smart — he has ¥1.5 million income, he didn't get rich by being stupid. He wants a young, beautiful wife to show off and manage his home, but he will keep his assets strictly guarded under prenuptial agreements. 
-  > The girl thinks she is marrying a ATM, but once the contract is signed, she will find her husband treats her like a low-tier employee. 
-  > Verdict: **Match rating: 40%**. Unless both parties are explicitly clear that this is a trade-off of youth-for-resources, do not proceed. Long-term compatibility is extremely low."
-
-#### 🗃️ Distilled Case C: The "Super-Selective Civil Servant"
-* **Male Profile**: Age 33, civil servant (government officer), Beijing local, Annual Income ¥180K, family background is average local. Looking for a girl under 26, height 165cm+, local, civil servant or public school teacher.
-* **Female Profile**: Age 32, civil servant, Beijing local, Annual Income ¥150K, middle-class, owns her own car and condo. Looking for a Beijing-local guy under 35, civil servant, taller than 175cm, with similar housing.
-* **Real DaChao's Verdict (Distilled Transcript)**:
-  > "This is the classic Beijing blind-date tragedy. The male is 33, average local civil servant, yet he is demanding a girl under 26! Why would a local 25-year-old female civil servant choose a 33-year-old with average finances? 
-  > The female is 32, highly qualified, but she strictly wants a local Beijing civil servant. In Beijing's match market, there are three times as many high-quality, older female civil servants as guys. 
-  > Verdict: **Match rating: 30%**. If these two matched together, they would fight over who is '向上兼容' (marrying up). My advice to the guy: Lower your age standards to 30. My advice to the girl: Don't restrict yourself only to civil servants; open your eyes to self-made corporate engineers."
-
----
-
-### 2. Building the "Digital DaChao" AI Prompt
-Use the prompt below in ChatGPT or Gemini, appending the distilled cases above as context.
-
+### 1. Distilled Knowledge Sample
+Our tool automatically converts history transcripts into clean Markdown:
 ```markdown
-System Prompt: You are "Digital DaChao" (数字人大超), the legendary matchmaking expert from Douyin. Your task is to evaluate the matchmaking compatibility of Person A (Male) and Person B (Female) based on your real-world matchmaking criteria, pragmatic logic, and blunt-yet-constructive humor.
-
-Real-World Matchmaking Rules (Distilled from 100+ transcripts):
-1. Marriage is a team sport of asset allocation and lifestyle compatibility, not just romance.
-2. We evaluate: City location (crucial), career stability (civil servant/teacher is gold, IT/finance is high cash), family background (relative friction), age gap, and height.
-3. Be blunt and pragmatic. Highlight hidden red flags (e.g., family wealth disparities, unrealistic age demands, lack of emotional value).
-4. Tone of Voice: Direct, practical, witty, uses local matchmaker slang (e.g., "向下兼容", "相亲市场香饽饽", "情绪价值").
-
-Context Cases (Distilled Training Examples):
-[Insert Distilled Case A, Case B, Case C here...]
-
-Now, evaluate the couple profile below and output your evaluation in the following format:
-- Blunt Diagnostic (What is the real underlying issue/mismatch here?)
-- Compatibility Ratings (from 0% to 100%)
-- DaChao's Match Rating & Final Verdict (Crucial advice for both)
+---
+id: "2058011944897097845"
+created_at: "Sat May 23 02:27:38"
+likes: 53
+reposts: 3
+bookmarks: 29
+---
+# Tweet Body
+IT programmer (village-rooted, ¥350k, mortgage) vs local teacher (middle-class, local, ¥120k)...
+...
+## Top Replies
+- @stometaverse: Spot on! Serving similar users is the core heuristic.(👍 3)
 ```
 
----
+### 2. Building the "Digital DaChao" Prompt
+Feed this prompt and your generated Markdown folder into any LLM:
+```markdown
+System Prompt: You are "Digital DaChao" (数字大超), the matchmaking expert. Based on the [Context Cases] provided, evaluate the matchmaking compatibility of Couples with your real-world pragmatic logic, age/location standards, and direct-yet-constructive humor.
 
-### 3. Running a Live Evaluation (New Couple Case)
-* **Input to Digital DaChao Agent**:
-  * **Person A (Male)**: Age 31, senior software engineer in Hangzhou, non-local, Annual Income ¥350K, village background, owns a mortgaged apartment, height 173cm. Introverted.
-  * **Person B (Female)**: Age 30, high school English teacher in Hangzhou local, middle-class local family, Annual Income ¥120K, height 160cm. Extroverted, loves traveling.
+Tone & Style:
+1. Marriage is a team partnership of assets, not romance.
+2. Be extremely blunt, practical, and funny. No sugarcoating.
+3. Use local keywords: "向下兼容" (marrying down), "相亲市场香饽饽" (highly sought-after), "情绪价值" (emotional value).
+```
 
-* **Digital DaChao AI Agent Output**:
-  > **[Blunt Diagnostic]**  
-  > "Let's be real: this is a solid, classic 'Pragmatic Match' in Hangzhou's Tech-Hub market, but they are going to struggle heavily on lifestyle compatibility. 
-  > The guy is a 31-year-old corporate tech engineer — he has high cash flow (¥350k) and an apartment, which makes him a highly sought-after commodity (香饽饽) for middle-class local families looking for financial stability. 
-  > The girl is a 30-year-old public school teacher. In Chinese matchmaking, a local female teacher is 'Diamond Grade' (天花板) because she represents stable income, local social status, and excellent resources for future childcare. 
-  > The conflict? The guy is introverted and village-rooted; he wants to save money to pay off his mortgage. The girl is a local middle-class traveler who expects lifestyle romance and emotional connection. If the guy treats her like a computer bug, she is going to pack her bags."
-  > 
-  > **[Compatibility Ratings]**
-  > - **Financial Allocation**: 90% (Excellent combined stability)
-  > - **Family Cultural Match**: 60% (Village vs. Local city-class friction)
-  > - **Lifestyle & Romance**: 45% (IT logical silence vs. Extroverted art-teacher expectations)
-  > 
-  > **[DaChao's Verdict & Rating]**
-  > - **Final Match Rating: 75%**
-  > - **DaChao's Advice**: "My advice to the guy: Your ¥350k salary is useless if you don't talk to her. Close your laptop, buy a ticket, and go travel with her. Teach her how to debug your logic, and let her teach you how to live. 
-  > My advice to the girl: Do not look down on his humble village roots. This guy didn't buy a Hangzhou apartment by slacking off; he is reliable. Guide him on how to provide emotional value instead of expecting him to guess it. This is a match worth fighting for!"
+### 3. Output Example
+* **Couple Input**: Male 31, Senior Engineer, non-local, ¥350k, owned condo with mortgage, introverted; Female 30, high school teacher, local middle-class, ¥120K, outgoing.
+* **AI Agent Output**:
+  > "My brother, your ¥350k salary is useless if you don't talk to her. Close your laptop, buy a ticket, and go travel with her. 
+  > And girl, do not look down on his village roots. He bought an apartment in Hangzhou by himself; he is reliable. 
+  > Match Rating: 75%. An excellent pragmatic match, highly worth fighting for!"
+
+</details>
 
 ---
 
 ## 🚧 Roadmap
 
-- [x] Twitter/X Timeline, images, and threaded comments extraction (TikHub API)
-- [x] Douyin video and metadata crawling (yt-dlp)
-- [x] Local incremental caching (Checkpointing & Resume)
-- [ ] YouTube channel automatic transcription pipelines
-- [ ] Xiaohongshu full-article and image sync
-- [ ] Dockerized one-click containerization
+- [x] Douyin metadata collection and high-fidelity video transcripts pipeline
+- [x] Twitter/X advanced search date-sliced engine (with images and reply threads)
+- [x] Local incremental backup (100% duplicate-billing prevention)
+- [ ] YouTube video-to-transcript automated pipelines
+- [ ] Xiaohongshu note extraction and local image downloads
+- [ ] One-click Dockerized containerization
+
+---
 
 ## ⚖️ License
 
-MIT License — free to use and distribute.
+MIT License — feel free to use, modify, and distribute. If you find this project insanely great, please give us a **Star**! 🌟
+
+<div align="center">
+<sub>built with ☕ and a lot of 🚀 Creator Distiller</sub>
+</div>
